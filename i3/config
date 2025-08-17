@@ -13,6 +13,7 @@ exec --no-startup-id xset -dpms
 exec --no-startup-id nm-applet
 exec --no-startup-id xinput --set-prop 14 "libinput Accel Speed" -0.75
 exec --no-startup-id sleep 1 && feh --bg-fill  ~/Pictures/scaled-dream2.png
+exec --no-startup-id setxkbmap -layout de_custom
 set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym KP_Add exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 3%+ && $refresh_i3status
@@ -241,3 +242,23 @@ client.focused          $green $green $black $green
 client.focused_inactive $black $black $bright_white $black
 client.unfocused        $black $black $bright_white $black
 client.urgent           $red $red $white $red
+
+
+
+# Alt + ü -> [
+bindsym Mod1+u exec --no-startup-id xdotool key Alt+bracketleft
+
+# Alt + + -> ]
+bindsym Mod1+plus exec --no-startup-id xdotool key Alt+bracketright
+
+# Alt + ä -> {
+bindsym Mod1+a exec --no-startup-id xdotool key Alt+Shift+bracketleft
+
+# Alt + # -> }
+bindsym Mod1+numbersign exec --no-startup-id xdotool key Alt+Shift+bracketright
+
+# Alt + q -> @
+bindsym Mod1+q exec --no-startup-id xdotool key Alt+q
+
+# Alt + n -> ~
+bindsym Mod1+n exec --no-startup-id xdotool key Alt+Shift+n
