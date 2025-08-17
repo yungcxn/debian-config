@@ -1,0 +1,32 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "custom" {
+
+	include "de"
+
+	key <AC11> {
+		symbols[Group1]=  [ udiaeresis, Udiaeresis, bracketleft, bracketleft ],
+		modifier_map Mod4 { <AC11> }
+	}
+	key <BKSL> {
+		symbols[Group1]=  [ plus, asterisk, bracketright, bracketright ],
+		modifier_map Mod4 { <BKSL> }
+	}
+	key <AD11> {
+		symbols[Group1]=  [ adiaeresis, Adiaeresis, braceleft, braceleft ],
+		modifier_map Mod4 { <AD11> }
+	}
+	key <AD12> {
+		symbols[Group1]=  [ numbersign, apostrophe, braceright, braceright ],
+		modifier_map Mod4 { <AD12> }
+	}
+	key <LSGT> {
+		symbols[Group1]=  [ less, greater, backslash, backslash ],
+	}
+	key <AD01> {
+		symbols[Group1]=  [ q, Q, at, at ],
+	}
+	key <AC06> {
+		symbols[Group1]=  [ n, N, asciitilde, asciitilde ],
+	}
+
+}

@@ -1,0 +1,65 @@
+# media
+pipewire
+pipewire-audio-client-libraries
+wireplumber
+nvidia-driver
+
+# display
+xorg
+xserver-xorg
+xinit
+xinput
+xdg-desktop-portal 
+xdg-desktop-portal-gtk
+i3
+i3status
+i3blocks
+
+# tools
+kitty
+firefox-esr
+vlc
+# vscode via link
+
+# python libs
+python3-pil
+python3-psutil
+python3-numpy
+
+# other libs
+libzmq3-dev
+
+# cmd tools / misc
+gpick
+nvtop
+btop
+unzip
+stress
+feh
+xdotool
+jq
+fonts-ubuntu
+gpg
+gcc
+vim
+git
+fastfetch
+fzf
+pciutils
+psmisc
+curl
+locate
+bc
+
+texlive-full
+latexmk
+biber
+texlive-fonts-recommended
+texlive-latex-extra
+texlive-lang-all
+
+# managed with https://developer.nvidia.com/cuda-downloads
+cuda-toolkit-13-0
+nvidia-settings
+
+# https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.zip

@@ -1,0 +1,240 @@
+set $mod Mod4
+
+font pango:UbuntuMono Nerd Font 14
+
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id nvidia-settings --load-config-only
+exec --no-startup-id ~/.config/i3/xrandr-bestpick.sh
+exec --no-startup-id picom --backend glx --vsync
+exec --no-startup-id systemctl --user start xdg-desktop-portal.service
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id xinput --set-prop 14 "libinput Accel Speed" -0.75
+exec --no-startup-id sleep 1; feh --bg-fill  ~/Pictures/scaled-dream2.png
+set $refresh_i3status killall -SIGUSR1 i3status
+
+bindsym KP_Add exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 3%+ && $refresh_i3status
+bindsym KP_Subtract exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 3%- && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id wpctl set-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+floating_modifier $mod
+focus_follows_mouse yes
+mouse_warping output
+
+tiling_drag modifier titlebar
+
+bindsym $mod+q exec --no-startup-id ~/.config/i3/custom-kill.sh
+
+bindsym $mod+a exec --no-startup-id ~/.config/i3/to-empty-workspace.sh kitty
+bindsym $mod+f exec --no-startup-id ~/.config/i3/to-empty-workspace.sh firefox
+bindsym $mod+c exec --no-startup-id ~/.config/i3/to-empty-workspace.sh code
+
+bindsym $mod+Shift+a exec kitty
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+c exec code
+
+bindsym Menu exec --no-startup-id dmenu_run
+
+bindsym $mod+Left focus left; exec --no-startup-id ~/.config/i3/move-cursor-to-focused.sh
+bindsym $mod+Down focus down; exec --no-startup-id ~/.config/i3/move-cursor-to-focused.sh
+bindsym $mod+Up focus up; exec --no-startup-id ~/.config/i3/move-cursor-to-focused.sh
+bindsym $mod+Right focus right; exec --no-startup-id ~/.config/i3/move-cursor-to-focused.sh
+
+bindsym $mod+Tab exec --no-startup-id ~/.config/i3/cycle-and-move.sh;
+bindsym $mod+Shift+Tab exec --no-startup-id ~/.config/i3/cycle-and-move.sh;
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+
+bindsym $mod+Control+Up resize grow width 3 px or 3 ppt; resize grow height 3 px or 3 ppt
+bindsym $mod+Control+Down resize shrink width 3 px or 3 ppt; resize shrink height 3 px or 3 ppt
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+Return fullscreen toggle
+
+bindsym $mod+space layout toggle tabbed splith
+
+bindsym $mod+period floating toggle
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+set $wsR1 "right"
+set $wsR2 "right2"
+
+workspace $ws1  output DP-0
+workspace $ws2  output DP-0
+workspace $ws3  output DP-0
+workspace $ws4  output DP-0
+workspace $ws5  output DP-0
+workspace $ws6  output DP-0
+workspace $ws7  output DP-0
+workspace $ws8  output DP-0
+workspace $ws9  output DP-0
+workspace $ws10 output DP-0
+
+workspace $wsR1 output DP-2
+workspace $wsR2 output DP-2
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+KP_End    workspace number $ws1
+bindsym $mod+KP_Down   workspace number $ws2
+bindsym $mod+KP_Next   workspace number $ws3
+bindsym $mod+KP_Left   workspace number $ws4
+bindsym $mod+KP_Begin  workspace number $ws5
+bindsym $mod+KP_Right  workspace number $ws6
+bindsym $mod+KP_Home   workspace number $ws7
+bindsym $mod+KP_Up     workspace number $ws8
+bindsym $mod+KP_Prior  workspace number $ws9
+
+bindsym $mod+KP_1 workspace number $ws1
+bindsym $mod+KP_2 workspace number $ws2
+bindsym $mod+KP_3 workspace number $ws3
+bindsym $mod+KP_4 workspace number $ws4
+bindsym $mod+KP_5 workspace number $ws5
+bindsym $mod+KP_6 workspace number $ws6
+bindsym $mod+KP_7 workspace number $ws7
+bindsym $mod+KP_8 workspace number $ws8
+bindsym $mod+KP_9 workspace number $ws9
+
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
+
+bindsym $mod+Shift+KP_End    move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+KP_Down   move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+KP_Next   move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+KP_Left   move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+KP_Begin  move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+KP_Right  move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+KP_Home   move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+KP_Up     move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+KP_Prior  move container to workspace number $ws9; workspace number $ws9
+
+bindsym $mod+Shift+KP_1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+KP_2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+KP_3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+KP_4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+KP_5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+KP_6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+KP_7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+KP_8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+KP_9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+KP_0 move container to workspace number $ws10; workspace number $ws10
+
+
+bindsym $mod+r workspace $wsR1
+bindsym $mod+g workspace $wsR2
+
+bindsym $mod+KP_Insert exec --no-startup-id ~/.config/i3/next-workspace.sh
+bindsym $mod+KP_0 exec --no-startup-id ~/.config/i3/next-workspace.sh
+
+bindsym $mod+Control+Shift+r reload
+bindsym $mod+Shift+r restart
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+  bindsym semicolon resize grow width 10 px or 10 ppt
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+
+
+set $special_active_border     #edecee
+set $special_inactive_border   #4d4d4d
+set $special_bell_border       #ffca85
+set $special_url               #61ffca
+
+set $special_active_tab_fg     #edecee
+set $special_active_tab_bg     #21202e
+set $special_inactive_tab_fg   #4d4d4d
+set $special_inactive_tab_bg   #21202e
+
+set $special_cursor            #edecee
+set $special_fg                #edecee
+set $special_bg                #15141B
+set $special_selection_fg      #edecee
+set $special_selection_bg      #1c1b22
+
+# colors
+set $black     #1c1b22
+set $bright_black  #4d4d4d
+set $red       #ff6767
+set $bright_red  #ffca85
+set $green     #61ffca
+set $bright_green #a277ff
+set $yellow    #ffca85
+set $bright_yellow #ffca85
+set $blue      #a277ff
+set $bright_blue  #a277ff
+set $magenta   #a277ff
+set $bright_magenta #a277ff
+set $cyan      #61ffca
+set $bright_cyan #61ffca
+set $white     #edecee
+set $bright_white #edecee
+
+bar {
+  font pango:UbuntuMono Nerd Font 15
+  separator_symbol "   "
+  status_command i3blocks
+  position top
+  colors {
+    background $special_bg
+    statusline $special_fg
+    separator  $blue
+
+    focused_workspace  $special_bg $blue $special_bg
+    active_workspace   $special_bg $green $special_bg
+    inactive_workspace $special_bg $bright_black $special_fg
+    urgent_workspace   $special_bg $red $special_fg
+  }
+}
+
+bindsym $mod+Shift+b exec killall -SIGUSR1 i3blocks
+
+for_window [class=Code] border normal
+
+# client colors
+client.focused          $green $green $black $green
+client.focused_inactive $black $black $bright_white $black
+client.unfocused        $black $black $bright_white $black
+client.urgent           $red $red $white $red

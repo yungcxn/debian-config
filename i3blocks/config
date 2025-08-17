@@ -1,0 +1,54 @@
+
+[cpu]
+command=sleep .5;$HOME/.config/i3blocks/cpu.sh
+label=CPU:
+color=#a277ff    # magenta
+interval=repeat
+
+[separator]
+
+[disk]
+command=$HOME/.config/i3blocks/disk.sh
+label=Disk:
+color=#1E90FF
+interval=repeat
+
+[separator]
+
+[ram]
+command=$HOME/.config/i3blocks/ram.sh
+label=RAM:
+color=#3CADB5    # blue
+interval=1
+
+[separator]
+
+[gpu]
+command=$HOME/.config/i3blocks/gpu.sh
+label=GPU:
+color=#61ffca    # green
+interval=1
+
+[separator]
+
+[volume]
+command=$HOME/.config/i3blocks/volume.sh
+interval=1
+color=#3aa148ff
+
+[separator]
+
+[date]
+command=date '+%d.%m.%Y %H:%M'
+label=
+color=#ffca85    # yellow
+interval=1
+
+[separator]
+
+[can]
+command=printf "•—⟪==c==a==n===> "
+label=
+color=#ff6767    # red
+interval=once
+
