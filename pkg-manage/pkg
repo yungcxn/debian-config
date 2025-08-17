@@ -50,6 +50,8 @@ psmisc
 curl
 locate
 bc
+maim
+xclip
 
 texlive-full
 latexmk

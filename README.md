@@ -6,6 +6,9 @@ My config builds upon debian 13 (trixie) and its minimal netinst install (ext4 f
 
 i3 is better than hyprland.
 
+![alt text](screenshots/image.png)
+![alt text](screenshots/image-1.png)
+
 ## pkg-manage
 
 I did not want to use nix since everything within apt works right out of the box, e.g. cuda and nvidia. 
@@ -17,3 +20,4 @@ usage:
 - write your line-separated apt packages into it
 - run your executable
 - those packages removed in the `pkg` file get removed when the executable runs (state save like in Terraform)
+

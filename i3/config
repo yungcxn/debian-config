@@ -5,14 +5,14 @@ font pango:UbuntuMono Nerd Font 14
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nvidia-settings --load-config-only
 exec --no-startup-id ~/.config/i3/xrandr-bestpick.sh
-exec --no-startup-id picom --backend glx --vsync
+exec --no-startup-id sleep 2 && picom --backend glx --vsync
 exec --no-startup-id systemctl --user start xdg-desktop-portal.service
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id xinput --set-prop 14 "libinput Accel Speed" -0.75
-exec --no-startup-id sleep 1; feh --bg-fill  ~/Pictures/scaled-dream2.png
+exec --no-startup-id sleep 1 && feh --bg-fill  ~/Pictures/scaled-dream2.png
 set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym KP_Add exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 3%+ && $refresh_i3status
@@ -37,6 +37,9 @@ bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+c exec code
 
 bindsym Menu exec --no-startup-id dmenu_run
+bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Control+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+
 
 bindsym $mod+Left focus left; exec --no-startup-id ~/.config/i3/move-cursor-to-focused.sh
 bindsym $mod+Down focus down; exec --no-startup-id ~/.config/i3/move-cursor-to-focused.sh

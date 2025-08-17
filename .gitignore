@@ -21,4 +21,8 @@
 pkg-manage/exec
 pkg-manage/.pkg-last-diff
 
+!screenshots/
+!screenshots/image.png
+!screenshots/image-1.png
+
 !README.md
