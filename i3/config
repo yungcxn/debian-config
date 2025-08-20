@@ -11,7 +11,7 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id xinput --set-prop 14 "libinput Accel Speed" -0.75
+exec --no-startup-id xinput --set-prop 12 "libinput Accel Speed" -0.75
 exec --no-startup-id sleep 1 && feh --bg-fill  ~/Pictures/scaled-dream2.png
 exec --no-startup-id setxkbmap -layout de_custom
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -32,10 +32,16 @@ bindsym $mod+q exec --no-startup-id ~/.config/i3/custom-kill.sh
 bindsym $mod+a exec --no-startup-id ~/.config/i3/to-empty-workspace.sh kitty
 bindsym $mod+f exec --no-startup-id ~/.config/i3/to-empty-workspace.sh firefox
 bindsym $mod+c exec --no-startup-id ~/.config/i3/to-empty-workspace.sh code
+bindsym $mod+o exec --no-startup-id ~/.config/i3/to-empty-workspace.sh obs
+bindsym $mod+y exec --no-startup-id ~/.config/i3/to-empty-workspace.sh "firefox -new-window https://youtube.com"
+bindsym $mod+g exec --no-startup-id ~/.config/i3/to-empty-workspace.sh "firefox -new-window https://chatgpt.com"
 
 bindsym $mod+Shift+a exec kitty
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+c exec code
+bindsym $mod+Shift+o exec obs
+bindsym $mod+Shift+y exec "firefox -new-window https://youtube.com"
+bindsym $mod+Shift+g exec "firefox -new-window https://chatgpt.com"
 
 bindsym Menu exec --no-startup-id dmenu_run
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -161,7 +167,7 @@ bindsym $mod+Shift+KP_0 move container to workspace number $ws10; workspace numb
 
 
 bindsym $mod+r workspace $wsR1
-bindsym $mod+g workspace $wsR2
+bindsym $mod+t workspace $wsR2
 
 bindsym $mod+KP_Insert exec --no-startup-id ~/.config/i3/next-workspace.sh
 bindsym $mod+KP_0 exec --no-startup-id ~/.config/i3/next-workspace.sh

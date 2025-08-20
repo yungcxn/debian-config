@@ -10,4 +10,5 @@ xkb_symbols "de_custom" {
   key <AB06> { type="FOUR_LEVEL", symbols[Group1]=[ n, N, asciitilde, asciitilde ] };
   key <RALT>	{[ backslash ]};
   include "level3(lalt_switch)"
+  key <RCTL> { [ Alt_L ] };
 };
