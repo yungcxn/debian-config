@@ -1,6 +1,6 @@
 
 [cpu]
-command=sleep .5;$HOME/.config/i3blocks/cpu.sh
+command=sleep .5;$HOME/.config/cpu.sh
 label=CPU:
 color=#a277ff    # magenta
 interval=repeat
@@ -8,7 +8,7 @@ interval=repeat
 [separator]
 
 [disk]
-command=$HOME/.config/i3blocks/disk.sh
+command=$HOME/.config/disk.sh
 label=Disk:
 color=#1E90FF
 interval=repeat
@@ -16,7 +16,7 @@ interval=repeat
 [separator]
 
 [ram]
-command=$HOME/.config/i3blocks/ram.sh
+command=$HOME/.config/ram.sh
 label=RAM:
 color=#3CADB5    # blue
 interval=1
@@ -24,7 +24,7 @@ interval=1
 [separator]
 
 [gpu]
-command=$HOME/.config/i3blocks/gpu.sh
+command=$HOME/.config/gpu.sh
 label=GPU:
 color=#61ffca    # green
 interval=1
@@ -32,7 +32,7 @@ interval=1
 [separator]
 
 [volume]
-command=$HOME/.config/i3blocks/volume.sh
+command=$HOME/.config/volume.sh
 interval=1
 color=#3aa148ff
 

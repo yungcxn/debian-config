@@ -59,7 +59,7 @@ int main(void) {
       if (system(cmd) == 0) {
         strcpy(new[n++], desired[i]);
       } else {
-        printf(" XXX Failed to install %s\n", desired[i]);
+        printf(" ! Failed to install %s\n", desired[i]);
         strcpy(finstalls[fi++], desired[i]);
       }
     } else { /* package exists */
@@ -75,7 +75,7 @@ int main(void) {
       printf("Removing %s ... \n", old[i]);
       snprintf(cmd, sizeof(cmd), "sudo apt remove -y %s > /dev/null 2>&1", old[i]);
       if (system(cmd) != 0) {
-        printf(" XXX Failed to remove %s\n", old[i]);
+        printf(" ! Failed to remove %s\n", old[i]);
         strcpy(new[n++], old[i]);
         strcpy(fremovals[fr++], old[i]);
       }
@@ -96,7 +96,7 @@ int main(void) {
 
   /* end summary */
   if (fi > 0 || fr > 0) {
-    printf("--- Fails:\n");
+    printf("\n\n Fail-Summary:\n");
     for (int i = 0; i < fi; i++) {
       printf("  - Install: %s\n", finstalls[i]);
     }

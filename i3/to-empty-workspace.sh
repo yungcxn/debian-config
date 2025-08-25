@@ -8,6 +8,10 @@ if [ "$window_count" -ne 0 ]; then
     i3-msg "workspace right2; exec $1"
   elif [ "$current_ws" = "right2" ]; then
     i3-msg "workspace right; exec $1"
+  elif [ "$current_ws" = "left2" ]; then
+    i3-msg "workspace left; exec $1"
+  elif [ "$current_ws" = "left" ]; then
+    i3-msg "workspace left; exec $1"
   else
     existing=$(i3-msg -t get_workspaces | jq '.[].num')
 

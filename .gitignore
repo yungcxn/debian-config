@@ -26,3 +26,7 @@ pkg-manage/.pkg-last-diff
 !screenshots/image-1.png
 
 !README.md
+!*.sh
+
+!cans-dwm/
+!cans-dwm/**

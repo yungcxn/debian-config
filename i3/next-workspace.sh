@@ -11,6 +11,14 @@ elif [[ "$current_name" == "right2" ]]; then
   exit
 fi
 
+if [[ "$current_name" == "left" ]]; then
+  i3-msg workspace "left2"
+  exit
+elif [[ "$current_name" == "left2" ]]; then
+  i3-msg workspace "left"
+  exit
+fi
+
 current_num=$(echo "$current_name" | grep -Eo '^[0-9]+')
 workspaces=($(i3-msg -t get_workspaces | jq -r ".[] | select(.output==\"$output\") | .name" | sort -n))
 

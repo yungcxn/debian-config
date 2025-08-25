@@ -3,6 +3,7 @@ pipewire
 pipewire-audio-client-libraries
 wireplumber
 nvidia-driver
+nvidia-vulkan-icd
 
 # display
 xorg
@@ -17,23 +18,75 @@ i3blocks
 xbindkeys
 xclip
 xautomation
+dunst
+xcompmgr
 
 # tools
 kitty
 firefox-esr
 vlc
 obs-studio
+ares
+gwenview
 # vscode via link
+
 
 # python libs
 python3-pil
 python3-psutil
 python3-numpy
+python3-requests
+python3-bs4
+python3-lxml
 
 # other libs
 libzmq3-dev
 
 # cmd tools / misc
+### i3 deps
+# pkg-config
+# libstartup-notification0
+# libstartup-notification0-dev
+#libx11-dev
+#libxcb1-dev
+#libxcb-keysyms1-dev
+#libxcb-util0-dev
+#libxcb-icccm4-dev
+#libxcb-ewmh-dev
+#libxcb-randr0-dev
+#libxcb-xinerama0-dev
+#libyajl-dev
+#libev-dev
+#libpango1.0-dev
+#libglib2.0-dev
+#libxcb-xkb-dev
+#libxcb-cursor-dev
+#libxcb-shape0-dev
+#libxcb-xrm-dev
+#libxkbcommon-dev
+#libxkbcommon-x11-dev
+#libc6-dev
+#asciidoc
+#libx11-xcb-perl
+xserver-xephyr
+xvfb
+#cpanminus
+#libipc-run-perl
+#xcb-proto
+### dwm deps
+libx11-dev
+libxinerama-dev
+libxft-dev
+libxrender-dev
+libfreetype6-dev
+ninja-build
+meson
+rsync
+forensics-extra
+imagemagick
+apt-file
+aria2
+dosfstools
 openssh-server
 gpick
 nvtop
@@ -58,20 +111,13 @@ bc
 maim
 zathura
 zathura-pdf-poppler
-
-# qemu-kvm
-libvirt-daemon-system
-libvirt-clients
-bridge-utils
-virt-manager 
-ovmf
-spice-client-gtk
-spice-vdagent
-qemu-system-x86
-virt-viewer
-cpuset
-gvncviewer
+neovim
+npm
+ripgrep
 mesa-utils
+vulkan-tools
+alsa-utils
+ncdu
 
 texlive-full
 latexmk
