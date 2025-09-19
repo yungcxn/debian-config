@@ -30,3 +30,6 @@ pkg-manage/.pkg-last-diff
 
 !cans-dwm/
 !cans-dwm/**
+
+!pics/
+!pics/**

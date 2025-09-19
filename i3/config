@@ -28,6 +28,8 @@ mouse_warping output
 
 tiling_drag modifier titlebar
 
+bindsym Scroll_Lock exec --no-startup-id ~/Pictures/random-look-front-bg.sh &
+
 bindsym $mod+q exec --no-startup-id ~/.config/i3/custom-kill.sh
 
 bindsym $mod+a exec --no-startup-id ~/.config/i3/to-empty-workspace.sh kitty
@@ -61,7 +63,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
 
 bindsym $mod+Control+Up resize grow width 3 px or 3 ppt; resize grow height 3 px or 3 ppt
 bindsym $mod+Control+Down resize shrink width 3 px or 3 ppt; resize shrink height 3 px or 3 ppt

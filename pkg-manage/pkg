@@ -28,6 +28,9 @@ vlc
 obs-studio
 ares
 gwenview
+krita
+wireshark
+meld
 # vscode via link
 
 
@@ -38,47 +41,40 @@ python3-numpy
 python3-requests
 python3-bs4
 python3-lxml
+python3-i3ipc
+python3-scienceplots
+python3-pygame
 
 # other libs
 libzmq3-dev
 
 # cmd tools / misc
-### i3 deps
-# pkg-config
-# libstartup-notification0
-# libstartup-notification0-dev
-#libx11-dev
-#libxcb1-dev
-#libxcb-keysyms1-dev
-#libxcb-util0-dev
-#libxcb-icccm4-dev
-#libxcb-ewmh-dev
-#libxcb-randr0-dev
-#libxcb-xinerama0-dev
-#libyajl-dev
-#libev-dev
-#libpango1.0-dev
-#libglib2.0-dev
-#libxcb-xkb-dev
-#libxcb-cursor-dev
-#libxcb-shape0-dev
-#libxcb-xrm-dev
-#libxkbcommon-dev
-#libxkbcommon-x11-dev
-#libc6-dev
-#asciidoc
-#libx11-xcb-perl
+colordiff
+openjdk-21-jdk
+openjdk-17-jdk
+inkscape
+network-manager-sstp
+network-manager-openvpn
+strongswan
+strongswan-nm
+ppp
+pptp-linux
+network-manager-pptp
+xl2tpd
+network-manager
+network-manager-l2tp
+nmap
+cifs-utils
+cmake
+llvm-dev
+libclang-dev
+clang
 xserver-xephyr
 xvfb
-#cpanminus
-#libipc-run-perl
-#xcb-proto
-### dwm deps
 libx11-dev
 libxinerama-dev
 libxft-dev
 libxrender-dev
-libfreetype6-dev
 ninja-build
 meson
 rsync
@@ -118,13 +114,24 @@ mesa-utils
 vulkan-tools
 alsa-utils
 ncdu
-
+linux-cpupower
+powerstat
 texlive-full
 latexmk
 biber
 texlive-fonts-recommended
 texlive-latex-extra
 texlive-lang-all
+cargo
+
+# vm
+virt-manager
+qemu-kvm
+libvirt-daemon-system
+libvirt-clients
+bridge-utils
+ovmf
+spice-vdagent
 
 # managed with https://developer.nvidia.com/cuda-downloads
 cuda-toolkit-13-0
