@@ -1,6 +1,8 @@
 default partial alphanumeric_keys
 xkb_symbols "de_custom" {
   include "de"
+  
+  // Your existing working keys
   key <AD11> { type="FOUR_LEVEL", symbols[Group1]=[ udiaeresis, Udiaeresis, bracketleft, bracketleft ] };
   key <AD12> { type="FOUR_LEVEL", symbols[Group1]=[ plus, asterisk, bracketright, bracketright ] };
   key <AC11> { type="FOUR_LEVEL", symbols[Group1]=[ adiaeresis, Adiaeresis, braceleft, braceleft ] };
@@ -8,7 +10,34 @@ xkb_symbols "de_custom" {
   key <LSGT> { type="FOUR_LEVEL", symbols[Group1]=[ less, greater, bar, bar ] };
   key <AD01> { type="FOUR_LEVEL", symbols[Group1]=[ q, Q, at, at ] };
   key <AB06> { type="FOUR_LEVEL", symbols[Group1]=[ n, N, asciitilde, asciitilde ] };
-  key <RALT>	{[ backslash ]};
+  
+  // Modifiers (your working setup)
+  key <RALT>  {[ backslash ]};
   include "level3(lalt_switch)"
   key <RCTL> { [ Alt_L ] };
+  
+  // Extended letters (Left Alt = Level3)
+  key <AC01> { type="FOUR_LEVEL", symbols[Group1]=[ a, A, U0101, U0100 ] };
+  key <AC02> { type="FOUR_LEVEL", symbols[Group1]=[ s, S, U1E63, U1E62 ] };
+  key <AC03> { type="FOUR_LEVEL", symbols[Group1]=[ d, D, U1E0D, U1E0C ] };
+  key <AC06> { type="FOUR_LEVEL", symbols[Group1]=[ h, H, U1E25, U1E24 ] };
+  key <AD08> { type="FOUR_LEVEL", symbols[Group1]=[ i, I, U012B, U012A ] };
+  key <AD07> { type="FOUR_LEVEL", symbols[Group1]=[ u, U, U016B, U016A ] };
+  key <AB01> { type="FOUR_LEVEL", symbols[Group1]=[ y, Y, U02BE, U02BF ] };
+  
+  // Top row: hamza and ayn on 2 and 3
+  key <AE02> { [ 2, quotedbl, U02BE, U02BE ] };  // Alt+2 = ʾ hamza
+  key <AE03> { [ 3, section, U02BF, U02BF ] };   // Alt+3 = ʿ ayn
+  
+  // Numpad: Indian Arabic numerals with Left Alt
+  key <KP0> { [ KP_0, KP_0, U0660, U0660 ] };  // ٠
+  key <KP1> { [ KP_1, KP_1, U0661, U0661 ] };  // ١
+  key <KP2> { [ KP_2, KP_2, U0662, U0662 ] };  // ٢
+  key <KP3> { [ KP_3, KP_3, U0663, U0663 ] };  // ٣
+  key <KP4> { [ KP_4, KP_4, U0664, U0664 ] };  // ٤
+  key <KP5> { [ KP_5, KP_5, U0665, U0665 ] };  // ٥
+  key <KP6> { [ KP_6, KP_6, U0666, U0666 ] };  // ٦
+  key <KP7> { [ KP_7, KP_7, U0667, U0667 ] };  // ٧
+  key <KP8> { [ KP_8, KP_8, U0668, U0668 ] };  // ٨
+  key <KP9> { [ KP_9, KP_9, U0669, U0669 ] };  // ٩
 };

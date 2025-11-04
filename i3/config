@@ -11,10 +11,11 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id xinput --set-prop 12 "libinput Accel Speed" -0.75
+exec --no-startup-id xinput --set-prop 9 "libinput Accel Speed" -0.75
 exec --no-startup-id sleep 1 && ~/.config/default-bg.sh
-exec --no-startup-id setxkbmap -layout de_custom
-exec --no-start-id dunst ~/.config/dunst/dunstrc
+exec --no-startup-id setxkbmap -layout "de_custom,ara(mac)" -option "grp:caps_toggle"
+exec --no-startup-id dunst ~/.config/dunst/dunstrc
+exec --no-startup-id export QT_QPA_PLATFORMTHEME=qt6ct
 set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym KP_Add exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 3%+ && $refresh_i3status
@@ -38,15 +39,17 @@ bindsym $mod+c exec --no-startup-id ~/.config/i3/to-empty-workspace.sh code
 bindsym $mod+o exec --no-startup-id ~/.config/i3/to-empty-workspace.sh obs
 bindsym $mod+y exec --no-startup-id ~/.config/i3/to-empty-workspace.sh "firefox -new-window https://youtube.com"
 bindsym $mod+g exec --no-startup-id ~/.config/i3/to-empty-workspace.sh "firefox -new-window https://chatgpt.com"
+bindsym $mod+d exec --no-startup-id ~/.config/i3/to-empty-workspace.sh dolphin
 
 bindsym $mod+Shift+a exec kitty
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+c exec code
 bindsym $mod+Shift+o exec obs
+bindsym $mod+Shift+d exec dolphin
 bindsym $mod+Shift+y exec "firefox -new-window https://youtube.com"
 bindsym $mod+Shift+g exec "firefox -new-window https://chatgpt.com"
 
-bindsym Menu exec --no-startup-id dmenu_run
+bindsym Menu exec --no-startup-id dmenu_run -fn 'UbuntuMono Nerd Font 14' -nb '#15141B' -nf '#edecee' -sb '#61ffca' -sf '#15141B' -b
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Control+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 
@@ -250,6 +253,7 @@ bar {
 bindsym $mod+Shift+b exec killall -SIGUSR1 i3blocks
 
 for_window [class=Code] border normal
+for_window [class="Minecraft"] floating enable
 
 # client colors
 client.focused          $green $green $black $green

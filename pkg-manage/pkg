@@ -3,7 +3,7 @@ pipewire
 pipewire-audio-client-libraries
 wireplumber
 nvidia-driver
-nvidia-vulkan-icd
+#nvidia-vulkan-icd
 
 # display
 xorg
@@ -22,6 +22,7 @@ dunst
 xcompmgr
 
 # tools
+libreoffice
 kitty
 firefox-esr
 vlc
@@ -31,8 +32,17 @@ gwenview
 krita
 wireshark
 meld
+steam
+prismlauncher
+dolphin
+ark
+dolphin-plugins
+ffmpegthumbs
+mullvad-vpn
+qbittorrent
+audacity
+dolphin-emu
 # vscode via link
-
 
 # python libs
 python3-pil
@@ -44,11 +54,34 @@ python3-lxml
 python3-i3ipc
 python3-scienceplots
 python3-pygame
-
+python3-pynput
 # other libs
 libzmq3-dev
 
 # cmd tools / misc
+bear
+clangd
+g++
+libxcursor-dev
+libxi-dev
+libxrandr-dev
+libgl1-mesa-dev
+libfontconfig1-dev
+libvulkan-dev
+vulkan-tools
+libvulkan1
+picom
+wine
+winetricks
+winbind
+samba
+cabextract
+protontricks
+ffmpeg
+bmon
+mergerfs
+qt6ct
+snap
 colordiff
 openjdk-21-jdk
 openjdk-17-jdk
