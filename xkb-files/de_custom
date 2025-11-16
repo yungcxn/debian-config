@@ -23,7 +23,9 @@ xkb_symbols "de_custom" {
   key <AC06> { type="FOUR_LEVEL", symbols[Group1]=[ h, H, U1E25, U1E24 ] };
   key <AD08> { type="FOUR_LEVEL", symbols[Group1]=[ i, I, U012B, U012A ] };
   key <AD07> { type="FOUR_LEVEL", symbols[Group1]=[ u, U, U016B, U016A ] };
-  key <AB01> { type="FOUR_LEVEL", symbols[Group1]=[ y, Y, U02BE, U02BF ] };
+  key <AC09> { type="FOUR_LEVEL", symbols[Group1]=[ l, L, U1E37, U1E36 ] };
+  key <AD06> { type="FOUR_LEVEL", symbols[Group1]=[ z, Z, U1E93, U1E92 ] };
+  key <AD05> { type="FOUR_LEVEL", symbols[Group1]=[ t, T, U1E6D, U1E6C ] };
   
   // Top row: hamza and ayn on 2 and 3
   key <AE02> { [ 2, quotedbl, U02BE, U02BE ] };  // Alt+2 = ʾ hamza

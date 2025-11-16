@@ -254,6 +254,7 @@ bindsym $mod+Shift+b exec killall -SIGUSR1 i3blocks
 
 for_window [class=Code] border normal
 for_window [class="Minecraft"] floating enable
+for_window [title="RPG"] move container to output HDMI-1
 
 # client colors
 client.focused          $green $green $black $green
