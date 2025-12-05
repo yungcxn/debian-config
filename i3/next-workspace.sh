@@ -1,4 +1,10 @@
 #!/bin/bash
+
+prev=false
+if [[ "$1" == "-p" ]]; then
+  prev=true
+fi
+
 focused=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true)')
 current_name=$(echo "$focused" | jq -r '.name')
 output=$(echo "$focused" | jq -r '.output')
@@ -29,5 +35,10 @@ for i in "${!workspaces[@]}"; do
   fi
 done
 
-next_index=$(( (current_index + 1) % ${#workspaces[@]} ))
+if $prev; then
+  next_index=$(( (current_index - 1 + ${#workspaces[@]}) % ${#workspaces[@]} ))
+else
+  next_index=$(( (current_index + 1) % ${#workspaces[@]} ))
+fi
+
 i3-msg workspace "${workspaces[$next_index]}"

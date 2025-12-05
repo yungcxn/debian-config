@@ -1,11 +1,11 @@
 
-[ip]
-command=mullvad status | grep "Visible location:" | sed 's/.*Visible location:[[:space:]]*//'
-label=
-color=#ff77cbff
-interval=3
+#[ip]
+#command=mullvad status | grep "Visible location:" | sed 's/.*Visible location:[[:space:]]*//'
+#label=
+#color=#ff77cbff
+#interval=3
 
-[separator]
+#[separator]
 
 [cpu]
 command=sleep .5;$HOME/.config/cpu.sh

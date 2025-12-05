@@ -174,14 +174,14 @@ bindsym $mod+Shift+KP_6 move container to workspace number $ws6; workspace numbe
 bindsym $mod+Shift+KP_7 move container to workspace number $ws7; workspace number $ws7
 bindsym $mod+Shift+KP_8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+Shift+KP_9 move container to workspace number $ws9; workspace number $ws9
-bindsym $mod+Shift+KP_0 move container to workspace number $ws10; workspace number $ws10
-
 
 bindsym $mod+r workspace $wsR1
 bindsym $mod+t workspace $wsR2
 
 bindsym $mod+KP_Insert exec --no-startup-id ~/.config/i3/next-workspace.sh
 bindsym $mod+KP_0 exec --no-startup-id ~/.config/i3/next-workspace.sh
+bindsym $mod+Shift+KP_Insert exec --no-startup-id ~/.config/i3/next-workspace.sh -p
+bindsym $mod+Shift+KP_0 exec --no-startup-id ~/.config/i3/next-workspace.sh -p
 
 bindsym $mod+Control+Shift+r reload
 bindsym $mod+Shift+r restart
